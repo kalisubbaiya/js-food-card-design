@@ -65,8 +65,16 @@ img{
 }
 .addCart{
     display: flex;
-    width: 80%;
-    margin: auto;
+    justify-content: space-around;
+    border-top: 1px solid #ccc;
+    padding: 20px 0 0;
+    visibility: hidden;
+}
+.cartLabel{
+    font-size: 14px;
+    padding: 4px 0 0;
+    color: blue;
+    font-weight: 600;
 }
 .cartInp{
     border: 1px solid #ccc;
@@ -76,9 +84,28 @@ input{
     border: 0;
     text-align: center;
 }
+input:focus{
+    outline: none;
+}
 button{
     border: none;
     font-size: 12px;
     background-color: #fff;
     padding: 5px;
+    position: relative;
+    top: px;
+}
+.col-card:hover .addCart{
+    visibility: visible;
+    transition: all 0.5s linear;
+}
+.col-card:hover{
+    border: 1px solid #ccc;
+    box-shadow: 0 0 2px #ccc;
+    padding: 15px;
+}
+.offer img{
+    width:20px;
+    position: relative;
+    top:4px;
 }

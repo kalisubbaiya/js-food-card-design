@@ -5,7 +5,7 @@ let food=[
         cuision:"Chinese, North Indian",
         rating:3.9,
         deliveryTime:"32 MINS",
-        cost:"300 FOR TWO",
+        cost:"₹300 FOR TWO",
     },
     {
         name:"Madurai Famous Jigarthanda Llp",
@@ -13,14 +13,22 @@ let food=[
         cuision:"Beverages",
         rating:"--",
         deliveryTime:"29 MINS",
-        cost:"100 FOR TWO",
+        cost:"₹100 FOR TWO",
     },{
         name:"Mom'S Homely Kitchen",
         imageUrl:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/c99a8184b9522bffdf43b4978a7a1878",
         cuision:"South Indian, Indian",
         rating:"--",
         deliveryTime:"28 MINS",
-        cost:"200 FOR TWO",
+        cost:"₹200 FOR TWO",
+    },
+    {
+        name:"Border Ubaith NSK Restaurant",
+        imageUrl:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/h7dq0naj748lyyxwma1f",
+        cuision:"Chinese, North Indian",
+        rating:3.3,
+        deliveryTime:"42 MINS",
+        cost:"₹300 FOR TWO",
     },
     {
         name:"Aasife Biriyani",
@@ -28,7 +36,31 @@ let food=[
         cuision:"Desserts, Chinese",
         rating:3.6,
         deliveryTime:"36 MINS",
-        cost:"350 FOR TWO",
+        cost:"₹350 FOR TWO",
+    }
+    ,{
+        name:"Krishna Tourist Home (P) Ltd",
+        imageUrl:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/vygixmrxr5oferlex6sc",
+        cuision:"North Indian, Chinese, Snacks, Biryani",
+        rating:3.8,
+        deliveryTime:"28 MINS",
+        cost:"₹300 FOR TWO",
+    }
+    ,{
+        name:"Anjuthoon The Nikkah Biryani",
+        imageUrl:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/depu0rvb6xkiyrarjiyw",
+        cuision:"Chinese, North Indian, Biryani",
+        rating:3.5,
+        deliveryTime:"46 MINS",
+        cost:"₹300 FOR TWO",
+    }
+    ,{
+        name:"Thopu Kadai",
+        imageUrl:"https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/kkmeqgrsrjz9yle8ww3y",
+        cuision:"South Indian, Chinese",
+        rating:3.8,
+        deliveryTime:"36 MINS",
+        cost:"₹250 FOR TWO",
     }
 ]
 
@@ -101,13 +133,17 @@ food.forEach(e=>{
         div3a.style.backgroundColor="#db7c38";
         div3a.style.color="#fff";
     }
+    else if(e.rating>=4 && e.rating<=5){
+        div3a.style.backgroundColor="green";
+        div3a.style.color="#fff";
+    }
 
     let offerDiv=document.createElement("div");
     offerDiv.classList.add("offer");
     div2.appendChild(offerDiv);
 
-    let offIco=document.createElement("i");
-    offIco.classList.add("fa-patch-percent");
+    let offIco=document.createElement("img");
+    offIco.src="percent.png";
     offerDiv.appendChild(offIco);
 
     let offPara=document.createElement("span");
@@ -142,23 +178,14 @@ food.forEach(e=>{
     plus.innerHTML="+";
     cartInp.appendChild(plus);
 
+    minus.addEventListener("click",function(){
+        if(input1.value>0){
+            input1.value--;
+        }
+    });
     
+    plus.addEventListener("click",function(){
+        input1.value++;
+    });
 
 })
-
-    let btn1=document.getElementById("btn1");
-    let btn2=document.getElementById("btn2");
-    btn1.addEventListener("click", myFunct);
-    btn2.addEventListener("click", myFunct1);
-    function myFunct1(){
-        let add=document.getElementById("number").value;
-        add++;
-        document.getElementById("number").value=add;
-    }
-    function myFunct(){
-        let add=document.getElementById("number").value;
-        if(add>0){        
-            add--;
-            document.getElementById("number").value=add;
-        }
-    }
