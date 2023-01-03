@@ -164,17 +164,14 @@ food.forEach(e=>{
     addCart.appendChild(cartInp);
 
     let minus=document.createElement("button");
-    minus.setAttribute("id","btn1");
     minus.innerHTML="-";
     cartInp.appendChild(minus);
 
     let input1=document.createElement("input");
     input1.setAttribute("type","text");
-    input1.setAttribute("id","number");
     cartInp.appendChild(input1);
 
     let plus=document.createElement("button");
-    plus.setAttribute("id","btn2");
     plus.innerHTML="+";
     cartInp.appendChild(plus);
 
