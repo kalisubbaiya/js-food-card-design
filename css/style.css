@@ -23,6 +23,8 @@ img{
 }
 .col-card{
     padding:16px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 2px #ccc;
 }
 .col-card h3{
     font-size: 17px;
@@ -68,7 +70,6 @@ img{
     justify-content: space-around;
     border-top: 1px solid #ccc;
     padding: 20px 0 0;
-    visibility: hidden;
 }
 .cartLabel{
     font-size: 14px;
@@ -94,15 +95,6 @@ button{
     padding: 5px;
     position: relative;
     top: px;
-}
-.col-card:hover .addCart{
-    visibility: visible;
-    transition: all 0.5s linear;
-}
-.col-card:hover{
-    border: 1px solid #ccc;
-    box-shadow: 0 0 2px #ccc;
-    padding: 15px;
 }
 .offer img{
     width:20px;

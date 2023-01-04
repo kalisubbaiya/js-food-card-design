@@ -169,6 +169,7 @@ food.forEach(e=>{
 
     let input1=document.createElement("input");
     input1.setAttribute("type","text");
+    input1.value=0;
     cartInp.appendChild(input1);
 
     let plus=document.createElement("button");
