@@ -176,6 +176,10 @@ food.forEach(e=>{
     plus.innerHTML="+";
     cartInp.appendChild(plus);
 
+    let para1=document.createElement("div");
+    para1.classList.add("addOne");
+    cont.appendChild(para1);
+
     minus.addEventListener("click",function(){
         if(input1.value>0){
             input1.value--;
@@ -184,6 +188,9 @@ food.forEach(e=>{
     
     plus.addEventListener("click",function(){
         input1.value++;
+        let para2=document.createElement("p");
+        para2.innerHTML=e.name;
+        para1.appendChild(para2);
     });
 
 })
