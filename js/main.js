@@ -180,17 +180,19 @@ food.forEach(e=>{
     para1.classList.add("addOne");
     cont.appendChild(para1);
 
+    let para2=document.createElement("p");
+    para1.appendChild(para2);
+
     minus.addEventListener("click",function(){
         if(input1.value>0){
             input1.value--;
+            para2.innerHTML="";
         }
     });
     
     plus.addEventListener("click",function(){
         input1.value++;
-        let para2=document.createElement("p");
         para2.innerHTML=e.name;
-        para1.appendChild(para2);
     });
 
 })
